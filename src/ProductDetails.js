@@ -31,7 +31,7 @@ const ProductDetails = (props) => {
               className="fs-1 stars"
               count={5}
               onChange={ratingChanged}
-              value={product.rating.rate}
+              value={product.rating?.rate}
               color2={"#ffd700"}
             />
             <span class="price text-muted"> {product.price}$ </span>
