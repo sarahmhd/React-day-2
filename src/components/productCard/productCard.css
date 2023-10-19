@@ -1,0 +1,90 @@
+.card .heart-icon:hover {
+  color: #830808;
+}
+
+.card .card-img-top {
+  max-height: 200px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card .card-img-top img {
+  height: 100%;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.card .card-img-top::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #6d597a4f;
+}
+
+.card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.card .card-body h3.card-title {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #6d597a;
+}
+
+.card .card-body p.card-text {
+  opacity: 0.8;
+  color: #6d597a;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.card .card-body .d-flex {
+  margin: 0;
+}
+
+.card .card-body .d-flex p.p-price {
+  opacity: 0.4;
+}
+
+.card .card-body .d-flex .add-cart {
+  color: #6d597a;
+}
+
+.card .card-body .d-flex .add-cart:focus {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.card:hover .card-img-top img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.stars span {
+  font-size: 25px !important;
+  margin-top: 10px !important;
+}
+
+.heart-icon {
+  z-index: 3;
+  cursor: pointer;
+  left: 10px;
+  top: 5px;
+}
