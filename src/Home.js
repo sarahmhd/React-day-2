@@ -2,11 +2,9 @@ import ProductLists from "./components/productList/ProductLists";
 
 const Home = () => {
   return (
-    <div className="py-5">
-      <div class="container">
-        <ProductLists />
-      </div>
-    </div>
+    <>
+      <h2 className="text-center m-3">Home Page</h2>
+    </>
   );
 };
 

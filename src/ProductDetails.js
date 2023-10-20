@@ -1,20 +1,31 @@
 import React, { useEffect, useState } from "react";
 
+import Loader from "./components/loader/Loader";
 import ReactStars from "react-stars";
 import { useParams } from "react-router-dom";
 
 const ProductDetails = (props) => {
   const [product, setProduct] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
   const { productId } = useParams();
+
   const ratingChanged = (newRating) => {
     console.log(newRating);
   };
 
   useEffect(() => {
+    setIsLoading(true);
     fetch(`https://fakestoreapi.com/products/${productId}`)
       .then((res) => res.json())
-      .then((data) => setProduct(data));
+      .then((data) => {
+        setIsLoading(false);
+        setProduct(data);
+      });
   }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <div className="container">

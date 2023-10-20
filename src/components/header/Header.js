@@ -28,8 +28,8 @@ const Header = () => {
             <Link className="nav-link" to="/about">
               About
             </Link>
-            <Link className="nav-link" to="/cart">
-              Cart
+            <Link className="nav-link" to="/shop">
+              Shop
             </Link>
             <Link className="nav-link" to="/day1">
               day1
