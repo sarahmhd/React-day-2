@@ -2,13 +2,32 @@ import { fireEvent, render, screen } from "@testing-library/react";
 
 import Counter from "./Counter";
 
-test("should render the default counter value 10", () => {
-  // render component
-  // select element
-  // events
-  // expect results
-
+test("should render counter value 1", () => {
   render(<Counter />);
-  const counter = screen.getByText("10");
-  expect(counter).toBeInTheDocument();
+  const counterVal = screen.getByText("1");
+  expect(counterVal).toBeInTheDocument();
+});
+
+test("should render increment button", () => {
+  render(<Counter />);
+  const counterVal = screen.getByText("1");
+  expect(counterVal).toHaveTextContent("1");
+
+  const increaseBtn = screen.getByRole("button", { name: "+" });
+  expect(increaseBtn).toBeInTheDocument();
+
+  fireEvent.click(increaseBtn);
+  expect(counterVal).toHaveTextContent("2");
+});
+
+test("should render decrement button", () => {
+  render(<Counter />);
+  const counterVal = screen.getByText("1");
+  expect(counterVal).toHaveTextContent("1");
+
+  const decreaseBtn = screen.getByRole("button", { name: "-" });
+  expect(decreaseBtn).toBeInTheDocument();
+
+  fireEvent.click(decreaseBtn);
+  expect(counterVal).toHaveTextContent("0");
 });
