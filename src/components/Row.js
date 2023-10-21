@@ -1,43 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+import Loader from "./loader/Loader";
+import UseAxios from "./customHook/UseAxios";
 
 const Row = () => {
-  const [rows, setRows] = useState([
-    { id: 1, fName: "sarah", lName: "mohamed", title: "Front end developer" },
-    { id: 2, fName: "ahmed", lName: "mohamed", title: "Front end developer" },
-    { id: 3, fName: "mohamed", lName: "ahmed", title: "Front end developer" },
-    { id: 4, fName: "omar", lName: "ahmed", title: "Front end developer" },
-    { id: 5, fName: "lyly", lName: "mohamed", title: "Front end developer" },
-    { id: 6, fName: "solo", lName: "mohamed", title: "Front end developer" },
-    { id: 7, fName: "david", lName: "sultan", title: "Front end developer" },
-  ]);
-  const deleteRow = (id) => {
-    let data = rows.filter((row) => row.id !== id);
-    setRows(data);
+  const {
+    data: rows,
+    isLoading,
+    error,
+    AddRow,
+    deleteRow,
+  } = UseAxios(`http://localhost:9000/users`, "get");
+
+  const addHandler = () => {
+    AddRow();
   };
 
-  const AddRow = () => {
-    let data = {
-      id: 8,
-      fName: "Rafif",
-      lName: "Mahmoud",
-      title: "Front end developer",
-    };
-    setRows([...rows, data]);
+  const deleteHandler = (id) => {
+    deleteRow(id);
   };
 
   const data = rows.map((row) => {
     return (
-      <tr>
+      <tr key={row.id}>
         <th scope="row">{row.id}</th>
-        <td>{row.fName}</td>
-        <td>{row.lName}</td>
-        <td>{row.title}</td>
+        <td>{row.name.firstname}</td>
+        <td>{row.name.lastname}</td>
+        <td>Front End Developer</td>
         <td>
           <a
             className="btn btn-primary btn-sm "
             href="#"
             role="button"
-            onClick={() => deleteRow(row.id)}
+            onClick={() => deleteHandler(row.id)}
           >
             Delete
           </a>
@@ -45,9 +40,14 @@ const Row = () => {
       </tr>
     );
   });
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     <div className="container">
-      <table class="table table-dark mt-5">
+      <table className="table table-dark mt-5">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -59,7 +59,7 @@ const Row = () => {
         </thead>
         <tbody>{data}</tbody>
       </table>
-      <button className="btn btn-primary" onClick={() => AddRow()}>
+      <button className="btn btn-primary" onClick={() => addHandler()}>
         Add row
       </button>
     </div>

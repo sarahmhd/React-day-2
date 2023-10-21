@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "img": "https://picsum.photos/200/305",
+      "age": 25,
+      "address": {
+        "geolocation": {
+          "lat": "20.1677",
+          "long": "-10.6789"
+        },
+        "city": "el paso",
+        "street": "prospect st",
+        "number": 124,
+        "zipcode": "12346-0456"
+      },
+      "id": 6,
+      "email": "david_r@gmail.com",
+      "username": "david_r",
+      "password": "3478*#54",
+      "name": {
+        "firstname": "david",
+        "lastname": "russell"
+      },
+      "phone": "1-678-345-9856",
+      "__v": 0
+    },
+    {
+      "img": "https://picsum.photos/200/306",
+      "age": 25,
+      "address": {
+        "geolocation": {
+          "lat": "10.3456",
+          "long": "20.6419"
+        },
+        "city": "fresno",
+        "street": "saddle st",
+        "number": 1342,
+        "zipcode": "96378-0245"
+      },
+      "id": 7,
+      "email": "miriam@gmail.com",
+      "username": "snyder",
+      "password": "f238&@*$",
+      "name": {
+        "firstname": "miriam",
+        "lastname": "snyder"
+      },
+      "phone": "1-123-943-0563",
+      "__v": 0
+    },
+    {
+      "name": {
+        "firstname": "Rafif",
+        "lastname": "Mahmoud"
+      },
+      "id": 8
+    }
+  ]
+}

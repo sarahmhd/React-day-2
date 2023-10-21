@@ -2,13 +2,14 @@ import "./App.css";
 
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 
-import About from "./About";
+import About from "./pages/About";
 import Counter from "./components/counter/Counter";
 import Header from "./components/header/Header";
-import Home from "./Home";
-import ProductDetails from "./ProductDetails";
+import Home from "./pages/Home";
+import ProductDetails from "./pages/ProductDetails";
 import Row from "./components/Row";
-import Shop from "./Shop";
+import Shop from "./pages/Shop";
+import Users from "./pages/Users";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/counter" element={<Counter />} />
+          <Route path="/users" element={<Users />} />
           <Route path="/day1" element={<Row />} />
           <Route path="/products/:productId" element={<ProductDetails />} />
         </Routes>

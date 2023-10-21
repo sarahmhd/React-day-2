@@ -1,4 +1,3 @@
-import ProductLists from "./components/productList/ProductLists";
 
 const Home = () => {
   return (

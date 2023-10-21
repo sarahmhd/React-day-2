@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Loader from "./components/loader/Loader";
+import Loader from "../components/loader/Loader";
 import ReactStars from "react-stars";
 import { useParams } from "react-router-dom";
 
