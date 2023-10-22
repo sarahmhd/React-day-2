@@ -37,6 +37,9 @@ const Header = () => {
             <Link className="nav-link" to="/users">
               Users
             </Link>
+            <Link className="nav-link" to="/todo">
+              ToDo
+            </Link>
             <Link className="nav-link" to="/day1">
               day1
             </Link>

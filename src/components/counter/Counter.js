@@ -1,19 +1,17 @@
 import "./counter.css";
 
-import React, { useState } from "react";
+import { decrement, increment } from "../../redux/slices/counterSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Counter = () => {
-  const [counter, setCounter] = useState(0);
+  const counter = useSelector((state) => state.counterReducer.counter);
+  const dispatch = useDispatch();
 
   const increaseCnt = () => {
-    setCounter(counter + 1);
+    dispatch(increment());
   };
   const decreaseCnt = () => {
-    if (counter <= 0) {
-      setCounter(0);
-    } else {
-      setCounter(counter - 1);
-    }
+    dispatch(decrement());
   };
 
   return (

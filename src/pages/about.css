@@ -1,0 +1,31 @@
+.about {
+  background: #11141b;
+  color: #fff;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .section-content {
+  gap: 1.1rem;
+}
+.about .section-content span {
+  color: #ffc209;
+}
+.about .section-content h6 {
+  color: #c3c3c3;
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.about .section-content p {
+  font-size: 14px;
+  color: #c5c5c5;
+  line-height: 24px;
+}
+.about .section-content .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #ffc209;
+}

@@ -1,0 +1,21 @@
+.todo-form h3 {
+  letter-spacing: 2px;
+}
+
+.form-control {
+  width: 90%;
+}
+
+.todos-list .x-icon {
+  user-select: none;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.todos-list .x-icon:hover {
+  color: rgb(212, 27, 27);
+}
