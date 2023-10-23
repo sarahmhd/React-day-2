@@ -13,6 +13,8 @@ import Shop from "./pages/Shop";
 import Todo from "./pages/todo/Todo";
 import Users from "./pages/Users";
 import { store } from "./redux/store";
+import Login from "./components/login/Login";
+import Register from "./components/register/Register";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/counter" element={<Counter />} />
             <Route path="/users" element={<Users />} />
             <Route path="/todo" element={<Todo />} />
